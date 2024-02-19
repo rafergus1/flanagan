@@ -28,4 +28,4 @@ steps:
     args: ["run", "build"]
 # [END cloudbuild_npm_node]
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
