@@ -13,13 +13,20 @@
 # limitations under the License.
 
 steps:
-- name: "node:8.13"
-  args: ["npm", "install"]
-- name: "node:8.13"
-  args: ["npm", "test"]
-- name: "node:8.13"
-  args: ["npm", "run", "build"]
+
+# Install node packages
+- name: node:10.16.3
+  entrypoint: npm
+  args: ['install']
+
+# Build productive files
+- name: node:10.16.3
+  entrypoint: npm
+  args: [ 'run', 'build', '--prod' ]
+
+# Deploy to google cloud app engine
 - name: "gcr.io/cloud-builders/gcloud"
-  args: ['functions', 'deploy', '[job_scheduling]', '--source=.', '--runtime', '[nodejs8.17]', '--trigger-http', '--allow-unauthenticated', '--entry-point=App']
-options:
-  logging: CLOUD_LOGGING_ONLY
+  args: ['app', 'deploy', '--version=demo']
+
+options:  
+logging: CLOUD_LOGGING_ONLY
