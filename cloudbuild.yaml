@@ -12,20 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# [START cloudbuild_npm_node]
 steps:
-  # Install dependencies
-  - name: node
-    entrypoint: npm
-    args: ["install"]
-  # Run tests
-  - name: node
-    entrypoint: npm
-    args: ["test"]
-  # Run custom commands
-  - name: node
-    entrypoint: npm
-    args: ["run", "build"]
-# [END cloudbuild_npm_node]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/flanagan/myimage', '.']
 options:
   logging: CLOUD_LOGGING_ONLY
