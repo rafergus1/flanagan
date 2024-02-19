@@ -27,3 +27,5 @@ steps:
     entrypoint: npm
     args: ["run", "build"]
 # [END cloudbuild_npm_node]
+options:
+  logging: CLOUD_LOGGING_ONLY
