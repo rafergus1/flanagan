@@ -13,7 +13,13 @@
 # limitations under the License.
 
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/flanagan/myimage', '.']
+- name: "node:8.13"
+  args: ["npm", "install"]
+- name: "node:8.13"
+  args: ["npm", "test"]
+- name: "node:8.13"
+  args: ["npm", "run", "build"]
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['functions', 'deploy', '[job_scheduling]', '--source=.', '--runtime', '[nodejs8.17]', '--trigger-http', '--allow-unauthenticated', '--entry-point=App']
 options:
   logging: CLOUD_LOGGING_ONLY
