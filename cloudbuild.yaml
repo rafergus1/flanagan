@@ -24,6 +24,10 @@ steps:
   entrypoint: npm
   args: [ 'run', 'build']
 
+# Deploy to google cloud app engine
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['app', 'deploy', '--version=demo']
+
 artifacts:
   npmPackages:
   - repository: 'https://us-central1-npm.pkg.dev/midyear-system-414823/npm-flanagan'
