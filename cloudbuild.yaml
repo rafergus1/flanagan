@@ -25,9 +25,9 @@ steps:
   args: [ 'run', 'build']
 
 artifacts:
-npmPackages:
-- repository: 'https://us-central1-npm.pkg.dev/Flanagan/npm-flanagan'
-  packagePath: '.'
+  npmPackages:
+  - repository: 'https://us-central1-npm.pkg.dev/Flanagan/npm-flanagan'
+    packagePath: '.'
 
 options:  
   logging: CLOUD_LOGGING_ONLY
