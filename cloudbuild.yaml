@@ -26,3 +26,8 @@ steps:
 
 options:  
   logging: CLOUD_LOGGING_ONLY
+
+ artifacts:
+    npmPackages:
+    - repository: 'https://us-central1-npm.pkg.dev/Flanagan/npm-flanagan'
+      packagePath: '.'
