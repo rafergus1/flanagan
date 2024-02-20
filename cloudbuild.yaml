@@ -26,7 +26,7 @@ steps:
 
 artifacts:
   npmPackages:
-  - repository: 'https://us-central1-npm.pkg.dev/Flanagan/npm-flanagan'
+  - repository: 'https://us-central1-npm.pkg.dev/midyear-system-414823/npm-flanagan'
     packagePath: '.'
 
 options:  
