@@ -11,7 +11,7 @@ steps:
       args:
           - "run"
           - "deploy"
-          - "Flanagan"
+          - "flanagan"
           - "--image"
           - "gcr.io/$PROJECT_ID/flanagan:$COMMIT_SHA"
           - "--region"
