@@ -18,12 +18,12 @@ Usefull media breakpoints
 	}
 
 	.recipe-item-title {
-		font-size: 8pt;
+		font-size: 10pt;
 		font-weight: bold;
 	}
 
 	.recipe-item-summary {
-		font-size: 6pt;
+		font-size: 8pt;
 		font-weight: normal;
 		color: #636464;
 	}
@@ -45,6 +45,68 @@ Usefull media breakpoints
 		display: flex;
 		align-self: flex-end;
 	}
+
+	.icon-details-size {
+		font-size:32pt;
+		display: flex;
+		align-self: flex-end;
+	}
+
+	.f-tertiary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 8pt;
+		color: #a0a0a0;
+	}
+	.f-secondary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 8pt;
+		color: #a0a0a0;
+	}
+	.f-primary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 10pt;
+		color: #ffffff;
+	}
+	.f-header {
+		font-family: "Montserrat", sans-serif;
+		font-size: 16pt;
+		font-weight: bold;
+		color: #bb86fc;
+	}
+
+	.entry-form-header {
+		background-color: #a3c6fa;
+		font: bold 16pt Arial;
+		padding: 5px;
+	}
+	.entry-form {
+		border-style: solid;
+		border-width: 2px;
+		border-color: #a3c6fa;
+		background: #dbe8fc;
+		margin: 3px;
+		padding: 0px;
+		border-radius: 7px;
+	}
+	
+	.entry-form-item {
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+
+	.form-label {
+		font-size: 0.75rem;
+	}
+
+	.form-control {
+		font-size: 0.75rem;
+	}
+
+	.btn-sm {
+		--bs-btn-font-size: 0.75rem;
+	}
+
 }
 
 @media only screen and (min-width: 481px)
@@ -81,6 +143,67 @@ Usefull media breakpoints
 		font-size:70pt;
 		display: flex;
 		align-self: flex-end;
+	}
+	
+	.icon-details-size {
+		font-size:45pt;
+		display: flex;
+		align-self: flex-end;
+	}
+
+	.f-tertiary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 10pt;
+		color: #a0a0a0;
+	}
+	.f-secondary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 10pt;
+		color: #a0a0a0;
+	}
+	.f-primary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 12pt;
+		color: #ffffff;
+	}
+	.f-header {
+		font-family: "Montserrat", sans-serif;
+		font-size: 18pt;
+		font-weight: bold;
+		color: #bb86fc;
+	}
+
+	.entry-form-header {
+		background-color: #a3c6fa;
+		font: bold 16pt Arial;
+		padding: 5px;
+	}
+	.entry-form {
+		border-style: solid;
+		border-width: 2px;
+		border-color: #a3c6fa;
+		background: #dbe8fc;
+		margin: 6px;
+		padding: 0px;
+		border-radius: 7px;
+	}
+	
+	.entry-form-item {
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+
+	.form-label {
+		font-size: 0.875rem;
+	}
+
+	.form-control {
+		font-size: 0.875rem;
+	}
+
+	.btn-sm {
+		--bs-btn-font-size: 0.875rem;
 	}
 }
 
@@ -119,6 +242,67 @@ Usefull media breakpoints
 		display: flex;
 		align-self: flex-end;
 	}
+
+	.icon-details-size {
+		font-size:70pt;
+		display: flex;
+		align-self: flex-end;
+	}
+
+	.f-tertiary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 12pt;
+		color: #a0a0a0;
+	}
+	.f-secondary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 12pt;
+		color: #a0a0a0;
+	}
+	.f-primary {
+		font-family: "Montserrat", sans-serif;
+		font-size: 16pt;
+		color: #ffffff;
+	}
+	.f-header {
+		font-family: "Montserrat", sans-serif;
+		font-size: 20pt;
+		font-weight: bold;
+		color: #bb86fc;
+	}
+
+	.entry-form-header {
+		background-color: #a3c6fa;
+		font: bold 16pt Arial;
+		padding: 5px;
+	}
+	.entry-form {
+		border-style: solid;
+		border-width: 2px;
+		border-color: #a3c6fa;
+		background: #dbe8fc;
+		margin: 10px;
+		padding: 0px;
+		border-radius: 7px;
+	}
+	
+	.entry-form-item {
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+
+	.form-label {
+		font-size: 1rem;
+	}
+
+	.form-control {
+		font-size: 1rem;
+	}
+
+	.btn-sm {
+		--bs-btn-font-size: 0.75rem;
+	}
 }
 
 .recipe-instructions {
@@ -136,31 +320,6 @@ Usefull media breakpoints
 	font-size: 20pt;
 	background: #636464;
 }
-
-.entry-form-header {
-	background-color: #a3c6fa;
-	font: bold 16pt Arial;
-	padding: 5px;
-}
-.entry-form {
-	border-style: solid;
-	border-width: 2px;
-	border-color: #a3c6fa;
-	background: #dbe8fc;
-	margin: 10px;
-	padding: 0px;
-	border-radius: 7px;
-}
-
-.entry-form-item {
-	padding-left: 10px;
-	padding-top: 10px;
-	padding-right: 10px;
-}
-
-
-
-
 
 .simple-table tr:last-child td {
 	border-bottom: none;
@@ -210,27 +369,7 @@ Usefull media breakpoints
 .br-secondary {
 	border-color: #a0a0a0;
 }
-.f-tertiary {
-	font-family: "Montserrat", sans-serif;
-	font-size: 12pt;
-	color: #a0a0a0;
-}
-.f-secondary {
-	font-family: "Montserrat", sans-serif;
-	font-size: 12pt;
-	color: #a0a0a0;
-}
-.f-primary {
-	font-family: "Montserrat", sans-serif;
-	font-size: 16pt;
-	color: #ffffff;
-}
-.f-header {
-	font-family: "Montserrat", sans-serif;
-	font-size: 20pt;
-	font-weight: bold;
-	color: #bb86fc;
-}
+
 .f-multiline {
 	white-space: pre-wrap;
 	word-wrap: normal;

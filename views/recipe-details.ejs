@@ -1,6 +1,6 @@
-<div class="container rounded-2 bk-container shadow-lg">
+<div class="container rounded-2 bk-container shadow-lg gx-2 gx-sm-3 gx-md-5">
     <% if(item != null) { %>
-        <div class="row my-3 mx-2 px-3 pt-3 pb-1 hl-label">
+        <div class="row my-3 mx-2 px-1 px-md-3 pt-3 pb-1 hl-label">
             <div class="col-12 f-header">
                 <div class="">
                     <span><%- item.name %></span>
@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div class="row my-3 mx-2 p-3 bk-tile rounded-2">
+        <div class="row my-3 mx-0 mx-md-2 px-0 px-md-1 pt-2 pb-2 bk-tile rounded-2">
             <div class="col-12">
                 <div class="mb-2 f-secondary">Ingredients</div>
                 <table class="table table-sm bk-tile text-nowrap br-secondary simple-table">
@@ -24,35 +24,37 @@
             </div>
         </div>
 
-        <div class="row my-3 mx-2 p-3 bk-tile rounded-2">
+        <div class="row my-3 mx-0 mx-md-2 px-0 px-md-1 pt-2 pb-2 bk-tile rounded-2">
             <div class="col-12">
                 <div class="mb-2 f-secondary">Instructions</div>
                 <div class="f-primary f-multiline"><%- item.instructions %></div>
             </div>
         </div>
             
-        <div class="row my-3 mx-2">
-            <div class="col-9" style="padding-left: 0px; padding-right:3px">
-                <div class="bk-tile rounded-2 p-3" style="width:100%; height:100%">
-                    <div class="mb-2 f-secondary">Glassware</div>
-                    <div class="f-primary f-multiline"><%- item.glassware %>, <%- item.rocks %></div>
+        <div class="row my-3">
+            <div class="col-9 pe-0">
+                <div class="bk-tile rounded-2 ms-0 ms-md-2 ps-0 ps-md-1 py-1"  style="height: 100%;">
+                    <div class="mb-2 mt-1 px-2 f-secondary">Glassware</div>
+                    <div class="px-2 f-primary f-multiline"><%- item.glassware %>, <%- item.rocks %></div>
                 </div>
             </div>
-            <div class="col-3" style="padding-right: 0px; padding-left-3: px;">
-                <div class="bk-tile rounded-2 align-items-center p-3" style="width:100%; height:100%">
-                    <div class="<%- drinkIcon %> icon-purple icon-lg" style="text-align: center;"></div>
+            <div class="col-3 pr-0">
+                <div class="bk-tile rounded-2 me-0 me-md-2 pe-0 pe-md-1 py-1 px-2" style="height: 100%;">
+                    <div class="align-items-center">
+                        <div class="<%- drinkIcon %> icon-purple icon-details-size" style="text-align: center;"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-3 mx-2 p-3 bk-tile rounded-2">
+        <div class="row mx-0 mx-md-2 px-0 px-md-1 pt-2 pb-2 bk-tile rounded-2">
             <div class="col-12">
                 <div class="mb-2 f-secondary">Comments</div>
                 <div class="f-primary f-multiline"><%- item.notes %></div>
             </div>
         </div>
 
-        <div class="row mb-4 mx-4 p-3">
+        <div class="row mb-4 mx-4 px-0 px-md-1 pt-2 pb-2">
             <div class="col-12 f-tertiary text-end f-multiline"><%- item.tags %></div>
         </div>
         
