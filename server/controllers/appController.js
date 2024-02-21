@@ -50,15 +50,21 @@ function getDrinkIcon(glass, rocks, ingredients) {
             return "icon-tumbler_rocks";
 
         case "cocktail|neat|no-peel|no-cherry|no-olive":
+        case "flute|neat|no-peel|no-cherry|no-olive":
             return "icon-cocktail";
         
         case "cocktail|neat|no-peel|no-cherry|olive":
         case "cocktail|neat|no-peel|cherry|no-olive":
         case "cocktail|neat|no-peel|cherry|olive":
+        case "flute|neat|no-peel|no-cherry|olive":
+        case "flute|neat|no-peel|cherry|no-olive":
+        case "flute|neat|no-peel|cherry|olive":
             return "icon-cocktail_olive";
         
         case "cocktail|neat|peel|no-cherry|no-olive":
         case "cocktail|neat|peel|no-cherry|olive":
+        case "flute|neat|peel|no-cherry|no-olive":
+        case "flute|neat|peel|no-cherry|olive":
             return "icon-cocktail_twist";
         
         case "coupe|neat|no-peel|no-cherry|no-olive":
@@ -107,13 +113,13 @@ exports.homepage = async(req, res) => {
 exports.recipes = async(req, res) => {
     try {
         // Get the recipes list from the database
-        var recipes = await db.getRecipes(100);
+        var recipes = await db.getRecipes(1000);
 
         // Loop over the recipes and get the glassware Icon to use and add it to the object
         for (var i = 0; i < recipes.length; i++) {
             const glassIcon = getDrinkIcon(recipes[i].glassware, recipes[i].rocks, recipes[i].ingredients);
             recipes[i].glassIcon = glassIcon;
-            console.log(recipes[i]);
+            // console.log(recipes[i]);
         }
 
         // Send the response

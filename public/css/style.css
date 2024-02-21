@@ -354,6 +354,12 @@ Usefull media breakpoints
 } */
 
 
+
+.text-muted {
+	color: rgb(113 136 159 / 75%);
+	--bs-secondary-color: rgb(113 136 159 / 75%);
+}
+
 .bk-page {
 	background-color: #292929;
 }
