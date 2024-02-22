@@ -112,8 +112,17 @@ exports.homepage = async(req, res) => {
 // RECIPES, /recipes
 exports.recipes = async(req, res) => {
     try {
+        
+        // Get the searchName for the query (it will be string type if one was used)
+        if (typeof(req.body.searchInput) === "string") {
+            var searchName = req.body.searchInput;
+        }
+        else {
+            var searchName = null;
+        }
+
         // Get the recipes list from the database
-        var recipes = await db.getRecipes(1000);
+        var recipes = await db.getRecipes(1000, searchName);
 
         // Loop over the recipes and get the glassware Icon to use and add it to the object
         for (var i = 0; i < recipes.length; i++) {

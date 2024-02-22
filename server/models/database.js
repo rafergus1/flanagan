@@ -36,11 +36,19 @@ async function getRecipe(query) {
     }
 }
 
-async function getRecipes(maxCount) {
+async function getRecipes(maxCount, searchName) {
     var result = null;
+    
+    if (searchName != null) {
+        var query = { "name": { $regex : new RegExp(searchName, "i")}};
+    }
+    else {
+        var query = {};
+    }
+
     try {
         await client.connect();
-        const cursor = await client.db("home_bar").collection("recipes").find({}).sort({name: 1}).limit(maxCount);
+        const cursor = await client.db("home_bar").collection("recipes").find(query).sort({name: 1}).limit(maxCount);
         result = await cursor.toArray();
     }
     catch (e) {
