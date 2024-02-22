@@ -271,6 +271,13 @@ Usefull media breakpoints
 		color: #bb86fc;
 	}
 
+	.logo-text {
+		font-family: "Montserrat", sans-serif;
+		font-size: 20pt;
+		font-weight: bold;
+		color: #bb86fc;
+	}
+
 	.entry-form-header {
 		background-color: #a3c6fa;
 		font: bold 16pt Arial;
