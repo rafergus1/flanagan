@@ -81,7 +81,27 @@ function getDrinkIcon(glass, rocks, ingredients) {
         case "coupe|neat|no-peel|cherry|no-olive":
         case "coupe|neat|no-peel|cherry|olive":
         case "coupe|neat|no-peel|no-cherry|olive":
+            return "icon-coupe_cherry";
+
+
+
+        case "nicknora|neat|no-peel|no-cherry|no-olive":
+            return "icon-coupe";
+        
+        case "nicknora|neat|peel|no-cherry|no-olive":
+        case "nicknora|neat|peel|no-cherry|olive":
+            return "icon-coupe_peel";
+
+        case "nicknora|neat|peel|cherry|no-olive":
+        case "nicknora|neat|peel|cherry|olive":
+            return "icon-coupe_cherry_peel";    
+        
+        case "nicknora|neat|no-peel|cherry|no-olive":
+        case "nicknora|neat|no-peel|cherry|olive":
+        case "nicknora|neat|no-peel|no-cherry|olive":
             return "icon-coupe_cherry"; 
+
+
 
         case "highball|rocks|no-peel|no-cherry|no-olive":
         case "highball|rocks|no-peel|no-cherry|olive":
@@ -94,7 +114,7 @@ function getDrinkIcon(glass, rocks, ingredients) {
             return "icon-tumbler_rocks";
 
         default:
-            return "icon-highball_rocks_straw"
+            return "icon-tumbler_rocks"
     }
 }
 
