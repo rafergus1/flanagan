@@ -60,6 +60,37 @@ async function getRecipes(maxCount, searchName) {
     }
 }
 
+async function getRecipesExtendedSearch(maxCount, searchString) {
+    var result = null;
+    
+    if (searchString != null) {
+        var query = {
+            $or: [
+                {"name": { $regex : new RegExp(searchString, "i")}},
+                {"ingredients": {
+                    $elemMatch: { "ingredient": { $regex : new RegExp(searchString, "i")}}
+                }
+            }
+        ]};
+    }
+    else {
+        var query = {};
+    }
+
+    try {
+        await client.connect();
+        const cursor = await client.db("home_bar").collection("recipes").find(query).sort({name: 1}).limit(maxCount);
+        result = await cursor.toArray();
+    }
+    catch (e) {
+        console.error(e);
+    }
+    finally {
+        await client.close();
+        return result;
+    }
+}
+
 async function getRecipeById(id) {
     try {
         var o_id = new ObjectId(id);  // Build the ID object from the id string
@@ -79,3 +110,4 @@ module.exports.addRecipe = addRecipe;
 module.exports.getRecipe = getRecipe;
 module.exports.getRecipes = getRecipes;
 module.exports.getRecipeById = getRecipeById;
+module.exports.getRecipesExtendedSearch = getRecipesExtendedSearch;

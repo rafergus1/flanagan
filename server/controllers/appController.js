@@ -142,7 +142,7 @@ exports.recipes = async(req, res) => {
         }
 
         // Get the recipes list from the database
-        var recipes = await db.getRecipes(1000, searchName);
+        var recipes = await db.getRecipesExtendedSearch(1000, searchName);
 
         // Loop over the recipes and get the glassware Icon to use and add it to the object
         for (var i = 0; i < recipes.length; i++) {
