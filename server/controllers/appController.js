@@ -122,7 +122,7 @@ function getDrinkIcon(glass, rocks, ingredients) {
 exports.homepage = async(req, res) => {
     try {
         const recipes = await db.getRecipes(10);
-        res.render("index", { title: 'Home Bar' , recipes});
+        res.render("index", { title: 'Flanagan|Home' , recipes});
     }
     catch (e) {
         res.status(500).send({message: e.message || "Error Occured"});
@@ -152,7 +152,7 @@ exports.recipes = async(req, res) => {
         }
 
         // Send the response
-        res.render("recipes", { title: 'Recipes' , recipes});
+        res.render("recipes", { title: 'Flanagan|Recipes' , recipes});
     }
     catch (e) {
         res.status(500).send({message: e.message || "Error Occured"});
@@ -164,7 +164,7 @@ exports.recipeDetails = async(req, res) => {
     try {
         const item = await db.getRecipeById(req.query.id);
         const drinkIcon = getDrinkIcon(item.glassware, item.rocks, item.ingredients);
-        res.render("recipe-details", { title: 'Recipe' , item, drinkIcon});
+        res.render("recipe-details", { title: 'Flanagan|Recipe' , item, drinkIcon});
     }
     catch (e) {
         res.status(500).send({message: e.message || "Error Occured"});
@@ -175,7 +175,7 @@ exports.recipeDetails = async(req, res) => {
 exports.submitRecipe = async(req, res) => {
     const infoErrorsObj = req.flash('infoErrors');
     const infoSubmitObj = req.flash('infoSubmit');
-    res.render("submit-recipe", { title: 'Submit Recipe', infoErrorsObj, infoSubmitObj });
+    res.render("submit-recipe", { title: 'Flanagan|Submit Recipe', infoErrorsObj, infoSubmitObj });
 }
 
 // SUBMIT RECIPE POST, /submit-recipe
@@ -235,3 +235,13 @@ exports.submitRecipeOnPost = async(req, res) => {
     }
     
 }
+
+// TASTING
+exports.tastings = async(req, res) => {
+    try {
+        res.render("tastings", { title: 'Flanagan|Tastings'});
+    }
+    catch (e) {
+        res.status(500).send({message: e.message || "Error Occured"});
+    }
+} 
